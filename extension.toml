@@ -1,0 +1,21 @@
+id = "xaml"
+name = "XAML"
+version = "0.1.0"
+schema_version = 1
+authors = ["Yevhenii Dziza <dziza12345@gmail.com>"]
+description = "WPF XAML support: syntax highlighting and IntelliSense via wpf-xaml-ls."
+repository = "https://github.com/ZenyaDAR/zed-xaml"
+snippets = ["snippets/xaml.json"]
+
+# Same commit as the csharp extension, which declares the same grammar name.
+[grammars.xml]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-xml"
+rev = "863dbc381f44f6c136a399e684383b977bb2beaa"
+path = "xml"
+
+[language_servers.wpf-xaml-ls]
+name = "WPF XAML Language Server"
+languages = ["XAML"]
+
+[language_servers.wpf-xaml-ls.language_ids]
+"XAML" = "xaml"

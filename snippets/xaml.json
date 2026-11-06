@@ -1,0 +1,39 @@
+{
+  "Grid with rows and columns": {
+    "prefix": "grid",
+    "body": [
+      "<Grid>",
+      "\t<Grid.RowDefinitions>",
+      "\t\t<RowDefinition Height=\"${1:Auto}\" />",
+      "\t\t<RowDefinition Height=\"${2:*}\" />",
+      "\t</Grid.RowDefinitions>",
+      "\t<Grid.ColumnDefinitions>",
+      "\t\t<ColumnDefinition Width=\"${3:*}\" />",
+      "\t\t<ColumnDefinition Width=\"${4:*}\" />",
+      "\t</Grid.ColumnDefinitions>",
+      "\t$0",
+      "</Grid>"
+    ]
+  },
+  "Style": {
+    "prefix": "style",
+    "body": [
+      "<Style x:Key=\"${1:Key}\" TargetType=\"${2:Button}\">",
+      "\t<Setter Property=\"${3:Margin}\" Value=\"${4:0}\" />",
+      "\t$0",
+      "</Style>"
+    ]
+  },
+  "DataTemplate": {
+    "prefix": "datatemplate",
+    "body": [
+      "<DataTemplate DataType=\"{x:Type ${1:local:ViewModel}}\">",
+      "\t$0",
+      "</DataTemplate>"
+    ]
+  },
+  "Binding": {
+    "prefix": "bind",
+    "body": "{Binding ${1:Path}, Mode=${2:TwoWay}, UpdateSourceTrigger=${3:PropertyChanged}}"
+  }
+}

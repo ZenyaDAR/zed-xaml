@@ -1,0 +1,17 @@
+[
+  {
+    "label": "dotnet build (nearest project)",
+    "command": "powershell",
+    "args": ["-NoProfile", "-Command", "$d='$ZED_DIRNAME'; while($d -and -not (Get-ChildItem -LiteralPath $d -Filter *.csproj)){$d=Split-Path $d}; if(-not $d){throw 'No .csproj found'}; dotnet build $d"]
+  },
+  {
+    "label": "dotnet run (nearest project)",
+    "command": "powershell",
+    "args": ["-NoProfile", "-Command", "$d='$ZED_DIRNAME'; while($d -and -not (Get-ChildItem -LiteralPath $d -Filter *.csproj)){$d=Split-Path $d}; if(-not $d){throw 'No .csproj found'}; dotnet run --project $d"]
+  },
+  {
+    "label": "dotnet watch (nearest project)",
+    "command": "powershell",
+    "args": ["-NoProfile", "-Command", "$d='$ZED_DIRNAME'; while($d -and -not (Get-ChildItem -LiteralPath $d -Filter *.csproj)){$d=Split-Path $d}; if(-not $d){throw 'No .csproj found'}; dotnet watch --project $d run"]
+  }
+]
